@@ -1,7 +1,7 @@
 import { sql } from "@vercel/postgres";
 
 export default async function AllUsers() {
-  // Fetch all users data along with the count of their posts, followers, and followees
+
   const usersData = await sql`
     SELECT 
       users.clerk_id,
@@ -29,7 +29,6 @@ export default async function AllUsers() {
       users.display_name;
   `;
 
-  // Render user data
   return (
     <div className="container mx-auto mt-8">
       <h1 className="text-3xl font-bold mb-4 text-center">All Users</h1>

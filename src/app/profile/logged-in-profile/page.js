@@ -4,7 +4,6 @@ import ClerkCurrentUser from "@/components/ClerkCurrentUser";
 export default async function Profile() {
   const currentUser = await ClerkCurrentUser();
 
-  // Fetch profile data
   const getProfile = await sql.query(`
     SELECT 
       users.name, 
@@ -21,7 +20,6 @@ export default async function Profile() {
 
   const profileData = getProfile.rows[0];
 
-  // Fetch followers' names
   const followersResult = await sql.query(`
     SELECT 
       users.display_name
@@ -35,7 +33,6 @@ export default async function Profile() {
 
   const followersData = followersResult.rows.map(row => row.display_name);
 
-  // Fetch followees' names
   const followeesResult = await sql.query(`
     SELECT 
       users.display_name
@@ -49,7 +46,6 @@ export default async function Profile() {
 
   const followeesData = followeesResult.rows.map(row => row.display_name);
 
-  // Fetch posts for the current user
   const userPostsResult = await sql.query(`
     SELECT 
       title,
@@ -117,7 +113,6 @@ export default async function Profile() {
           </div>
         )}
 
-        {/* Display user posts */}
         {userPosts.length > 0 && (
           <div className="bg-white shadow-md rounded-lg p-6 mb-6">
             <h2 className="text-xl font-semibold mb-4">User Posts</h2>
@@ -133,4 +128,4 @@ export default async function Profile() {
     </div>
   );
 }
-``
+

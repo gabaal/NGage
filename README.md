@@ -1,8 +1,7 @@
-I've really struggled this week as i have a lot going on and my meds have beeeen changed knocking me for six! I am not sleeping very well and i cant clear my head thus trying to code is tricking. 
+I've really struggled this week as i have a lot going on and my meds have been changed knocking me for six! I am not sleeping very well and i cant clear my head thus trying to code is tricky. 
 
 ## Todo
- - profile page
- - add users posts to thier own profile page
+
  - allow logged in user to click on another users profile to see thier profile details and posts
 
 # Build a social network

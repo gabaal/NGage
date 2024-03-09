@@ -1,7 +1,7 @@
 import { sql } from "@vercel/postgres";
 import Link from 'next/link';
-
 export default async function AllPosts() {
+  
   const posts = await sql`
   SELECT 
   posts.post_id,
@@ -40,14 +40,18 @@ ORDER BY
           <div className="flex justify-center">
             <div className="grid gap-4">
               {posts.rows.map((post) => (
+                
                 <div key={post.post_id} className="bg-white shadow-md rounded-lg p-4 mb-4 overflow-hidden max-w-lg">
+                  <Link href={`/posts/${post.post_id}`}>
                   <h2 className="text-xl font-bold mb-2">{post.post_title}</h2>
                   <p className="mb-2">{post.post_comment}</p>
-                  <div className="flex items-center justify-between text-gray-600">
+                  
+                  <div className="flex items-center justify-between text-gray-600 cursor-pointer">
                     <p>Likes: {post.like_count}</p>
                     <p>{post.post_date}</p>
                     <p>By: {post.user_display_name}</p>
                   </div>
+                </Link>
                 </div>
               ))}
             </div>

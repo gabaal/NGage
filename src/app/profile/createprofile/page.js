@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import { sql } from "@vercel/postgres";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache"
@@ -12,7 +12,6 @@ export default function NewProfile() {
     
     const clerk_id = await ClerkCurrentUser()
     console.log(`Clerk ID returned from ClerkCurrentUser ${clerk_id}`)
-    // const clerk_id = formData.get("clerk_id")
     const name = formData.get("name")
     const display_name = formData.get("display_name")
     const email = formData.get("email")
