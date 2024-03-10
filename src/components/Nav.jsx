@@ -13,8 +13,9 @@ export default function Nav() {
           <nav className="flex space-x-4 text-white">
             <Link href="/" className="hover:text-gray-300">Home</Link>
             <Link href="/posts" className="hover:text-gray-300">Posts</Link>
-            <Link href="/profile/logged-in-profile" className="hover:text-gray-300">Profile</Link>
+            {/* <Link href="/profile/logged-in-profile" className="hover:text-gray-300">Profile</Link> */}
             <Link href="/profile" className="hover:text-gray-300">All Profiles</Link>
+            <Link href="/profile/createprofile" className="hover:text-gray-300">Add Profile</Link>
             {userId ? <UserButton/> : <SignInButton />}
           </nav>
         </div>

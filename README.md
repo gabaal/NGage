@@ -2,6 +2,8 @@ I've really struggled this week as i have a lot going on and my meds have been c
 
 I also fired up my pc saturday and tried to push to git and got loads of errors regarding empty and corrupt files, i think i have cured this so the latest version is on Vite.
 
+On friday the clerk integration was working to send a new user to the new porfile page, this is not working now for some reason..
+
 ## Todo
  - tidy up database removing test posts etc.
  x allow logged in user to click on another users profile to see thier profile details and posts
