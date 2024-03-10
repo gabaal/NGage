@@ -3,6 +3,7 @@ import { sql } from "@vercel/postgres";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache"
 import ClerkCurrentUser from "@/components/ClerkCurrentUser";
+import * as Label from '@radix-ui/react-label';
 
 export default function NewPostPost() {
   

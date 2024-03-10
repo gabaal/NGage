@@ -1,6 +1,9 @@
 import { sql } from "@vercel/postgres";
+import { revalidatePath } from "next/cache";
 
 export default async function Home() {
+  revalidatePath("/")
+  
   const posts = await sql`
     SELECT
       posts.post_id,
@@ -39,7 +42,7 @@ export default async function Home() {
                 <p className="mb-2">{post.post_comment}</p>
                 <div className="flex items-center mb-2">
                   <p className="text-gray-600 flex-1">Likes: {post.like_count}</p>
-                  <p className="text-gray-600 flex-1 text-center">Posted: {post.post_date}</p>
+                  <p className="text-gray-600 flex-1 text-center"> {post.post_date}</p>
                   <p className="text-gray-600 flex-1 text-right">By: {post.user_display_name}</p>
                 </div>
               </div>

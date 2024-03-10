@@ -1,5 +1,5 @@
 import { sql } from "@vercel/postgres";
-
+import Link from "next/link";
 export default async function AllUsers() {
 
   const usersData = await sql`
@@ -35,6 +35,7 @@ export default async function AllUsers() {
       <div className="max-w-lg mx-auto">
         {usersData.rows.map((user) => (
           <div key={user.clerk_id} className="bg-white shadow-md rounded-lg p-4 mb-4 overflow-hidden">
+            <Link href={`/profile/${user.clerk_id}`}>
             <div className="flex items-center mb-2">
               <label className="block font-semibold mr-2">Display Name:</label>
               <span>{user.display_name}</span>
@@ -53,6 +54,7 @@ export default async function AllUsers() {
               <label className="block font-semibold ml-4 mr-2">Followees:</label>
               <span>{user.followee_count}</span>
             </div>
+            </Link>
           </div>
         ))}
       </div>

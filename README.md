@@ -4,7 +4,7 @@ I also fired up my pc saturday and tried to push to git and got loads of errors 
 
 ## Todo
  - tidy up database removing test posts etc.
- - allow logged in user to click on another users profile to see thier profile details and posts
+ x allow logged in user to click on another users profile to see thier profile details and posts
 
 # Build a social network
 
@@ -16,7 +16,7 @@ I also fired up my pc saturday and tried to push to git and got loads of errors 
 
 ## Stretch Stories
 - [x] As a user, I am able to see a list of other user's posts and/or profiles on the site
-- [ ] As a user, I am able able to visit other user profiles
+- [x] As a user, I am able able to visit other user profiles
 - [ ] As a user, I am able to follow other users
 - [ ] As a user, I am able to like posts I think are good, and see how many likes a post has
 
@@ -29,7 +29,7 @@ I also fired up my pc saturday and tried to push to git and got loads of errors 
 - [ ] Use at least 1 Radix UI Primitive or similar
 
 ## Stretch Goals
-- [ ] Enable users to visit other user profiles after seeing their posts on a global timeline
+- [x] Enable users to visit other user profiles after seeing their posts on a global timeline
 - [ ] Enable users to follow other users by creating a follower and follwee relationship between two user profiles
 - [ ] Enable users to like other users' posts by creating a user_id and liked_post relationship in a junction table
 - [ ] A user's biography cannot be blank. If a user logs in but doesn't have a biography set, they should be asked to fill one in
