@@ -28,7 +28,7 @@ On friday the clerk integration was working to send a new user to the new porfil
 - [x] Enable each user to create a profile associated with their userId, and a form to input their biography and location data, etc. with a URL similar to /user/[userId].
 - [x] Enable users to create posts associated with the userId, and display those posts on the user's profile page
 - [x] Show a 404 error if a user profile doesn't exist
-- [ ] Use at least 1 Radix UI Primitive or similar
+- [x] Use at least 1 Radix UI Primitive or similar
 
 ## Stretch Goals
 - [x] Enable users to visit other user profiles after seeing their posts on a global timeline

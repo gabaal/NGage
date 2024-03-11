@@ -1,6 +1,11 @@
 import { sql } from "@vercel/postgres";
+import { revalidatePath } from "next/cache";
 import Link from "next/link";
+
+
 export default async function AllUsers() {
+  
+  revalidatePath("/profile")
 
   const usersData = await sql`
     SELECT 
@@ -31,7 +36,7 @@ export default async function AllUsers() {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-bold mb-4 text-center">All Users</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Profiles</h1>
       <div className="max-w-lg mx-auto">
         {usersData.rows.map((user) => (
           <div key={user.clerk_id} className="bg-white shadow-md rounded-lg p-4 mb-4 overflow-hidden">
